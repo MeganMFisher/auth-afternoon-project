@@ -1,0 +1,28 @@
+{
+  "name": "auth-afternoon-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeganMFisher/auth-afternoon-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeganMFisher/auth-afternoon-project/issues"
+  },
+  "homepage": "https://github.com/MeganMFisher/auth-afternoon-project#readme",
+  "dependencies": {
+    "express": "^4.15.0",
+    "express-session": "^1.15.1",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-auth0": "^0.6.0",
+    "passport-github2": "^0.1.10",
+    "request": "^2.79.0"
+  }
+}

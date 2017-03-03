@@ -9,6 +9,8 @@ var port = 3030;
 
 var app = express();
 
+app.use(express.static('./public'));
+
 app.use(session({
     secret: config.sessionSecret,
     saveUninitialized: true,
@@ -36,7 +38,7 @@ passport.deserializeUser(function(obj, done) {
 
 app.get('/auth/github', passport.authenticate('github'));
 
-app.get('/auth/gibhub/callback',
+app.get('/auth/github/callback',
   passport.authenticate('github', {successRedirect: '/#/home'}), function(req, res) {
     res.status(200).send(req.user);
 })

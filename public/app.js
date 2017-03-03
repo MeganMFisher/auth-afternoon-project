@@ -1,9 +1,9 @@
-angular.module('app', ['ui-router'])
+angular.module('app', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider){
 
-    $urlRouterProvider.otherwise('./');
-
+    $urlRouterProvider.otherwise('/');
+    
     $stateProvider
     .state('login', {
         url: '/',
@@ -20,13 +20,13 @@ angular.module('app', ['ui-router'])
 
 })
 
-app.config(function($httpProvider) {
+angular.module('app').config(function($httpProvider) {
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     $httpProvider.interceptors.push('myHttpInterceptor');
 });
 
 // register the interceptor as a service
-app.factory('myHttpInterceptor', function($q) {
+angular.module('app').factory('myHttpInterceptor', function($q) {
     return {
         // optional method
         'responseError': function(rejection) {
